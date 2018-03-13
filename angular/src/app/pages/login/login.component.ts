@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 
-declare var $:any;
+declare var $: any;
 
 @Component({
   selector: 'app-login',
@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     $('#login-form').validate({
-        errorClass: "help-block",
+        errorClass: 'help-block',
         rules: {
             email: {
                 required: true,
@@ -28,10 +28,10 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
             }
         },
         highlight: function(e) {
-            $(e).closest(".form-group").addClass("has-error")
+            $(e).closest('.form-group').addClass('has-error');
         },
         unhighlight: function(e) {
-            $(e).closest(".form-group").removeClass("has-error")
+            $(e).closest('.form-group').removeClass('has-error');
         },
     });
   }
